@@ -1,0 +1,44 @@
+{
+    "Título": "Manual de vida",
+    "Autor": "Epicteto",
+    "El hombre procede de la divinidad": [
+      {
+        "Título": "El ser humano se distingue de los animales",
+        "Capítulos": [
+          "En la sociabilidad, la lealtad, el respeto, la cautela y en comprender lo que hace",
+          "Los animales se forman representaciones y las usan, pero una cosa es el uso y otra la comprensión"
+          
+        ]
+      },
+      {
+        "Título": "La divinidad nos concedió capacidades libres de impedimentos que dependen de nosotros",
+        "Capítulos": [
+          {"Subtítulo":"Racionalidad",
+          "Temas":[
+            "Su naturaleza es admitir lo verdadero, rechazar lo falso, abstenerce ante lo indiferente",
+            {"1":"Subtemas",
+            "Sirve para usar las representaciones como es debido":[
+                "Acertar en la valoración de las representaciones es tarea del instruido",
+                "La escencia del bien y del mal reside en el uso de las representaciones"
+            ]
+            }
+          ]
+        },
+          {"Subtítulo":"Albedrío",
+          "Temas":[
+            
+            {"1":"Subtemas",
+            "El bien y el mal radican en el albedrío":[
+                "En lo que depende del albedrío, actuar con valentía; en lo que depende de él, actuar con preocupación"
+                
+            ]
+            },
+            "Se sirve de las demás facultades, las pone a prueba y de relieve"
+          ]
+        },
+          "Nos hacen ciudadanos y regentes del mundo, capaces de comprender el gobierno divino y extraer concecuencias"
+        ]
+      }
+      
+    ]
+  }
