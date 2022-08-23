@@ -59,7 +59,7 @@ begin
       when 1
         get_valor
       when 2
-        precios_finales = puts "El arreglo de precios con impuestos es:
+        precios_finales = puts "El arreglo de precios con impuestos es:"
       when 3
         puts "El arreglo de precios finales ordenado ascendentemente es: #{array_precios.sort}"
       when 4
