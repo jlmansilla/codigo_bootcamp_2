@@ -1,0 +1,401 @@
+  [1m[35m (776.8ms)[0m  [1m[35mCREATE DATABASE "RoR_Team_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (874.4ms)[0m  [1m[35mCREATE DATABASE "RoR_Team_api_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2022-08-11 23:06:47 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 17.9ms | Allocations: 879)
+Completed 200 OK in 144ms (Views: 58.0ms | ActiveRecord: 0.0ms | Allocations: 7945)
+
+
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (47.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3868955790759017910)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220813001910)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "last_name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220813001910"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-13 00:25:11.373588"], ["updated_at", "2022-08-13 00:25:11.373588"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3868955790759017910)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Juan"], ["last_name", "Perez"], ["created_at", "2022-08-13 00:32:38.968131"], ["updated_at", "2022-08-13 00:32:38.968131"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2022-08-12 20:34:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.8ms | Allocations: 753)
+Completed 200 OK in 90ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 6430)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-08-12 20:34:05 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 28.4ms | ActiveRecord: 8.2ms | Allocations: 6864)
+
+
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-12 20:34:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-12 20:34:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 00:37:00.197539"], ["updated_at", "2022-08-13 00:37:00.197539"]]
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (3.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.809052"], ["updated_at", "2022-08-13 01:07:43.809052"]]
+  [1m[36mTRANSACTION (38.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.856764"], ["updated_at", "2022-08-13 01:07:43.856764"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.862945"], ["updated_at", "2022-08-13 01:07:43.862945"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.868567"], ["updated_at", "2022-08-13 01:07:43.868567"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.874581"], ["updated_at", "2022-08-13 01:07:43.874581"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.879766"], ["updated_at", "2022-08-13 01:07:43.879766"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.884850"], ["updated_at", "2022-08-13 01:07:43.884850"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.890431"], ["updated_at", "2022-08-13 01:07:43.890431"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.895213"], ["updated_at", "2022-08-13 01:07:43.895213"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.900655"], ["updated_at", "2022-08-13 01:07:43.900655"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:07:43.905933"], ["updated_at", "2022-08-13 01:07:43.905933"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.265623"], ["updated_at", "2022-08-13 01:09:57.265623"]]
+  [1m[36mTRANSACTION (28.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.300297"], ["updated_at", "2022-08-13 01:09:57.300297"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.305647"], ["updated_at", "2022-08-13 01:09:57.305647"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.317416"], ["updated_at", "2022-08-13 01:09:57.317416"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.324727"], ["updated_at", "2022-08-13 01:09:57.324727"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.331598"], ["updated_at", "2022-08-13 01:09:57.331598"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.337556"], ["updated_at", "2022-08-13 01:09:57.337556"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.347654"], ["updated_at", "2022-08-13 01:09:57.347654"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.355390"], ["updated_at", "2022-08-13 01:09:57.355390"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.362904"], ["updated_at", "2022-08-13 01:09:57.362904"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:09:57.370163"], ["updated_at", "2022-08-13 01:09:57.370163"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.865693"], ["updated_at", "2022-08-13 01:10:09.865693"]]
+  [1m[36mTRANSACTION (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.900292"], ["updated_at", "2022-08-13 01:10:09.900292"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.905668"], ["updated_at", "2022-08-13 01:10:09.905668"]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.915236"], ["updated_at", "2022-08-13 01:10:09.915236"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.920081"], ["updated_at", "2022-08-13 01:10:09.920081"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.925656"], ["updated_at", "2022-08-13 01:10:09.925656"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.931394"], ["updated_at", "2022-08-13 01:10:09.931394"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.936322"], ["updated_at", "2022-08-13 01:10:09.936322"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.941550"], ["updated_at", "2022-08-13 01:10:09.941550"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.946816"], ["updated_at", "2022-08-13 01:10:09.946816"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Luis"], ["last_name", "Salinas"], ["created_at", "2022-08-13 01:10:09.951889"], ["updated_at", "2022-08-13 01:10:09.951889"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started GET "/users" for 127.0.0.1 at 2022-08-12 21:17:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 172ms (Views: 39.7ms | ActiveRecord: 8.9ms | Allocations: 23595)
+
+
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-12 21:17:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/users" for 127.0.0.1 at 2022-08-12 21:22:39 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.0ms | Allocations: 4704)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2022-08-12 21:26:18 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 308ms (Views: 0.8ms | ActiveRecord: 2.4ms | Allocations: 8774)
+
+
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-12 21:26:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/users/9" for 127.0.0.1 at 2022-08-12 21:31:36 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 139ms (Views: 1.0ms | ActiveRecord: 15.5ms | Allocations: 3842)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-08-12 21:37:57 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Mauricio", "last_name"=>"Fuentes"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (11.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mauricio"], ["last_name", "Fuentes"], ["created_at", "2022-08-13 01:37:57.934188"], ["updated_at", "2022-08-13 01:37:57.934188"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 153ms (Views: 3.0ms | ActiveRecord: 29.4ms | Allocations: 5511)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-08-12 21:38:20 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 1.5ms | Allocations: 4770)
+
+
+Started DELETE "/users/9" for 127.0.0.1 at 2022-08-12 21:39:46 -0400
+Processing by UsersController#destroy as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mUser Destroy (3.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:38:in `destroy'
+Completed 204 No Content in 15ms (ActiveRecord: 5.1ms | Allocations: 2107)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-08-12 21:40:00 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.4ms | Allocations: 4589)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2022-08-12 21:40:19 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms | Allocations: 586)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=9):
+  
+app/controllers/users_controller.rb:44:in `set_user'
+Started PUT "/users/1" for 127.0.0.1 at 2022-08-12 21:44:07 -0400
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"11111", "last_name"=>"11111"}, "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mUser Update (10.7ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "last_name" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["name", "11111"], ["last_name", "11111"], ["updated_at", "2022-08-13 01:44:07.470018"], ["id", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:29:in `update'
+Completed 200 OK in 50ms (Views: 0.7ms | ActiveRecord: 11.9ms | Allocations: 2669)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-08-12 21:44:23 -0400
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.5ms | Allocations: 4589)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-08-12 21:45:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44:in `set_user'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 673)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-08-12 21:47:22 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 28.6ms | Allocations: 5163)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<UsersController:0x0000000000cc60>):
+  
+app/controllers/users_controller.rb:13:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2022-08-12 21:50:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 6.6ms | Allocations: 22332)
+
+
+  
+NameError (undefined local variable or method `debug' for #<UsersController:0x00000000008bb0>
+Did you mean?  debugger):
+  
+app/controllers/users_controller.rb:13:in `show'
+Started GET "/users/1" for 127.0.0.1 at 2022-08-12 21:53:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+Completed 200 OK in 143903ms (Views: 3.0ms | ActiveRecord: 10.4ms | Allocations: 186719)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2022-08-12 21:55:47 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 200 OK in 7797ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 8219)
+
+
+Started GET "/options.html" for 127.0.0.1 at 2022-08-12 21:59:16 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/options.html"):
+  
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-12 23:00:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-13 16:38:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-13 19:38:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-08-13 19:38:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/9" for 127.0.0.1 at 2022-08-13 19:38:50 -0400
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 404 Not Found in 77ms (ActiveRecord: 64.3ms | Allocations: 3130)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=9):
+  
+app/controllers/users_controller.rb:45:in `set_user'
+Started GET "/users/8" for 127.0.0.1 at 2022-08-13 19:39:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 200 OK in 53562ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 77726)
+
+
+Started GET "/users" for 127.0.0.1 at 2022-08-13 19:40:28 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 60ms (Views: 44.1ms | ActiveRecord: 0.5ms | Allocations: 5115)
+
+
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-13 19:40:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2022-08-13 19:41:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 200 OK in 23ms (Views: 1.0ms | ActiveRecord: 4.6ms | Allocations: 3799)
+
+
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-13 19:41:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+Started GET "/users/2" for 127.0.0.1 at 2022-08-13 19:42:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:45:in `set_user'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 669)
+
+
+Started GET "/images/icons/gear.png" for 127.0.0.1 at 2022-08-13 19:42:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png"):
+  
+  [1m[36mUser Count (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
