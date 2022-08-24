@@ -1,0 +1,19 @@
+# tt = User.find(1)
+
+# puts tt.name
+# puts tt.last_name
+# puts tt.id
+
+# rails db:drop # eliminar TODO la base
+# rails db:create # Crea la base de datos
+# rails db:migrate # crea los modelos a nicel de BD
+# rails db:seeed # crea los datos
+
+# rails c # ingresar a consola
+# User.last
+# User.first
+# User.find(1)
+# User.find_by(id: 1)
+# User.find_by(name: 'name 1')
+# User.where(id: 1)
+# User.where(name: 'name 1')
