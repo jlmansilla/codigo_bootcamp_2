@@ -399,3 +399,4 @@ ActionController::RoutingError (No route matches [GET] "/images/icons/gear.png")
   
   [1m[36mUser Count (3.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
   [1m[36mUser Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
