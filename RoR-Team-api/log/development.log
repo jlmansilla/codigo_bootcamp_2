@@ -563,3 +563,5 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
   [1m[36mFollower Create (0.9ms)[0m  [1m[32mINSERT INTO "followers" ("follower_name", "entero", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["follower_name", "jm"], ["entero", 2], ["user_id", 15], ["created_at", "2022-08-25 02:30:38.880072"], ["updated_at", "2022-08-25 02:30:38.880072"]]
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mFollower Load (1.8ms)[0m  [1m[34mSELECT "followers".* FROM "followers"[0m
+  [1m[36mComment Load (13.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
