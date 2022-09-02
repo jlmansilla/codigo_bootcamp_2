@@ -1,0 +1,74 @@
+rails generate model clients name:string last_name:string address:string state:string email:string
+
+# Genera modelo ty tabla clientes
+
+
+rails generate model products sku:string name:string category:string brand:string stock:integer
+
+# Genera modelo y tabla productos
+
+
+pg_hpa_conf 
+trust
+ALTER USER postgres WITH PASSWORD '';
+
+INSERT INTO VENDEDORES 
+(RUN, NOMBRE, APELLIDOS,FECHA_DE_NACIMIENTO,SECCION)
+VALUES
+('123456789', 'Juanita', 'Perez', '1994-07-04', 'Tecno'),
+('134567890', 'Bruce', 'Lee', '1990-07-08', 'Hogar'),
+('112345678', 'Juan Alberto','Mansilla', '1995-11-04', 'tecno'), 
+('101234577', 'Pablo', 'Rojas', '1980-09-04', 'hogar'),
+('145678890', 'Nicolas', 'Echenique', '1989-05-03', 'vestuario'), 
+('156788901', 'Jericho', 'Jorquera', '1990-11-01', 'hogar'),
+('167890012', 'Magdalena', 'Gonzalez', '1985-09-04', 'tecno'),
+('178901234', 'Pamela', 'Flores', '1986-07-04', 'vestuario'), 
+('189012345', 'Loreto', 'Aburto', '1988-07-04', 'vestuario'),
+('190123456', 'Susana', 'Soto', '1972-05-03', 'hogar');
+
+INSERT INTO PRODUCTOS 
+(NOMBRE_PRODUCTO, CATEGORIA, MARCA, STOCK)
+VALUES
+('smart tv 32', 'tecno', 'samsung', '20'),
+('living 4 cuerpos', 'hogar', 'MICA', '10'),
+('smart tv 42', 'tecno', 'samsung', '25'), 
+('living 2 cuerpos', 'hogar', 'MICA', '20'),
+('Chaqueta impermeable', 'vestuario', 'Lippi', '30'), 
+('cama 2 plazas', 'hogar', 'MICA', '10'),
+('smart tv 50', 'tecno', 'samsung', '10'),
+('zapatos 42', 'vestuario', 'Weinbrener', '50'), 
+('pantalon 42', 'vestuario', 'Lee', '20'),
+('cama king', 'hogar', 'MICA', '20');
+
+
+puts 'Create Clients'
+Client.create(name: 
+From Marilyn Aguilar González~ to Everyone 07:02 PM
+puts 'Create Products'
+
+Product.create(sku: '1', name:'smart tv 32', category: 'tecno', brand: 'samsung', stock: '20', price: '110000')
+Product.create(sku: '2', name:'living 4 cuerpos', category: 'hogar', brand:  'MICA', stock: '10', price: '350000')
+Product.create(sku: '3', name:'smart tv 42', category: 'tecno', brand:  'samsung', stock: '25', price: '160000')
+Product.create(sku: '4', name:'living 2 cuerpos', category: 'hogar', brand:  'MICA', stock: '20', price: '210000')
+Product.create(sku: '5', name:'Chaqueta impermeable', category: 'vestuario', brand:  'Lippi', stock: '30', price: '80000')
+Product.create(sku: '6', name:'cama 2 plazas', category: 'hogar', brand: 'MICA', stock: '10', price: '150000')
+Product.create(sku: '7', name:'smart tv 50', category: 'tecno', brand: 'samsung', stock: '10', price: '200000')
+Product.create(sku: '8', name:'zapatos 42', category: 'vestuario', brand: 'Weinbrener', stock: '50', price: '50000')
+Product.create(sku: '9', name:'pantalon 42', category: 'vestuario', brand: 'Lee', 
+Product.create(sku: '9', name:'pantalon 42', category: 'vestuario', brand: 'Lee', stock: '20', price: '20000')
+Product.create(sku: '10', name:'cama king', category: 'hogar', brand: 'MICA', stock: '20', price: '220000')
+
+puts 'Create Sellers'
+
+Seller.create(rut: '123456789', name: 'Cristina', last_name: 'Paredes', birth_date: '1994-07-04', department: 'Tecno', salary: '500000')
+Seller.create(rut: '123456789', name: 'Juanita', last_name: 'Perez', birth_date: '1994-07-05', department: 'Tecno', salary: '580000')
+Seller.create(rut: '134561110', name: 'Valentina', last_name: 'Lee', birth_date: '1990-07-08', department: 'Hogar', salary: '400000')
+Seller.create(rut: '134567890', name: 'Bruce', last_name: 'Lopez', birth_date: '1990-07-09', department: 'Hogar', salary: '450000')
+Seller.create(rut: '101234577', name: 'Pablo', last_name: 'Rojas', birth_date: '1980-09-04', department: 'hogar', salary: '520000')
+Seller.create(rut: '145678890', name: 'Nicolas', last_name: 'Echenique', birth_date: '1989-05-03', department: '
+From Marilyn Aguilar González~ to Everyone 07:02 PM
+Seller.create(rut: '145678890', name: 'Nicolas', last_name: 'Echenique', birth_date: '1989-05-03', department: 'vestuario', salary: '350000')
+Seller.create(rut: '156788901', name: 'Jericho', last_name: 'Jorquera', birth_date: '1990-11-01', department: 'hogar', salary: '600000')
+Seller.create(rut: '156788111', name: 'Loreto', last_name: 'Aguila', birth_date: '1990-11-03', department: 'hogar', salary: '560000')
+Seller.create(rut: '167890012', name: 'Magdalena', last_name: 'Gonzalez', birth_date: '1985-09-04', department: 'tecno', salary: '430000')
+Seller.create(rut: '178901234', name: 'Pamela', last_name: 'Flores', birth_date: '1986-07-04', department: 'vestuario', salary: '380000')
